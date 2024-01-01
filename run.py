@@ -78,20 +78,25 @@ while True:
         # 최근 시그널의 시간대를 msg_time 변수에 저장
         # 현재 시간과 최근 시그널 시간 차이를 diff 변수에 저장
         # 최종 시그널이 5분 이내인지 확인
-        message = bot.get_updates()[-1].message
-        msg_time = message.date
-        diff = now - msg_time
-        if diff < datetime.timedelta(minutes=5):
-            tel_msg = message.text
-            if sig_s in tel_msg:
-                tel_sig = 1
-            elif sig_l in tel_msg:
-                tel_sig = 2
+        updates = bot.get_updates()
+        if updates:
+            message = updates[-1].message
+            msg_time = message.date
+            diff = now - msg_time
+            if diff < datetime.timedelta(minutes=5):
+                tel_msg = message.text
+                if sig_s in tel_msg:
+                    tel_sig = 1
+                elif sig_l in tel_msg:
+                    tel_sig = 2
+                else:
+                    tel_sig = 3
+                    signal_msg = "꿀비트Ai봇 시그널을 확인중입니다..\n"
             else:
                 tel_sig = 3
                 signal_msg = "꿀비트Ai봇 시그널을 확인중입니다..\n"
+        
         else:
-            tel_sig = 3
             signal_msg = "꿀비트Ai봇 시그널을 확인중입니다..\n"
         # 핵심코드 // ㅡㅡㅡㅡㅡ 꿀비트AI봇과 실시간 동기화 진행 ㅡㅡㅡㅡㅡ
 
