@@ -62,7 +62,6 @@ https://docs.google.com/spreadsheets/d/e/2PACX-1vQn2v3c_QggmD9w23D9K39vWVvmMurha
 
 ──────────────────────────────
 
-# OFFICIAL Website
-https://fully-autotrading.com
+- OFFICIAL Website: https://fully-autotrading.com
 
 #algotrading #hedgemode #bitcoin #btc #eth #crypto #livetrading #quantitative #futures #binance #okx #bitget #hedge #live #profit #otomatik #Торговый #RobôTrader #math #maths #physics #fully #best #automated #trading #bot #robot #system
